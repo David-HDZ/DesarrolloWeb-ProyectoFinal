@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="top">
+        <nav class="navbar container">
+            <div class="navbar__logo">
+                <h2 class="navbar__title">HAMOC</h2>
+            </div>
+
+            <ul class="navbar__link__principal navbar__link--menu">
+                <li class="navbar__item">
+                    <a href="#utilidades" class="navbar__link">Utilidades</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#reseñas" class="navbar__link"">Reseñas</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#catalogo" class="navbar__link"">Catálogo</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#preguntas" class="navbar__link"">Preguntas</a>
+                </li>
+
+                <img src="./images/icons/close.svg" alt="cerrar ventana" class="navbar__close">
+            </ul>
+
+            <div class="navbar__menu">
+                <img src="./images/icons/menu.svg" alt="menu" class="navbar__image">
+            </div>
+        </nav>
+
+        <section class="top__introduction container">
+            <h1 class="top__title">Renta cuando quieras</h1>
+            <p class="top__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi omnis autem corporis porro quibusdam, veritatis blanditiis vero, ullam, ratione eos aperiam vel. Pariatur, eveniet vitae neque provident soluta quos et?</p>
+            <a href="" class="top__link">Busca Ahora</a>
+        </section>
+    </header>
+
+    <main>
+        <section class="container info" id="utilidades">
+            <h2 class="subtitle">¿Qué puedes hacer???</h2>
+            <p class="info__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sed assumenda voluptatibus voluptas fugit animi error praesentium, vitae totam debitis libero tempora inventore eius voluptate! Earum illum aperiam tempore reprehenderit.</p>
+
+            <div class="info__main">
+                <article class="info__icon">
+                    <img src="./images/icons/buy.svg" alt="compra casa" class="info__svg">
+                    <h3 class="info__subtitle">Compra una casa</h3>
+                    <p class="info__paragraphp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nihil mollitia perspiciatis. Eveniet.</p>
+                </article>
+                <article class="info__icon">
+                    <img src="./images/icons/rent.svg" alt="renta casa" class="info__svg">
+                    <h3 class="info__subtitle">Renta una casa</h3>
+                    <p class="info__paragraphp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nihil mollitia perspiciatis. Eveniet.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="comments" id="reseñas">
+            <div class="comments__container container">
+                <img src="./images/icons/rowL.svg" alt="izquierda" id="before" class="comments__arrow">
+                <section class="comments__body comments__body--show" data-id="1">
+                    <div class="comments__text">
+                        <h2 class="subtitle">Soy Fernanda <span class="comments__profession">
+                            empresaria
+                        </span></h2>
+                        <p class="comments__personal">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati aperiam reiciendis quasi quibusdam sapiente.
+                        </p>
+                    </div>
+
+                    <figure class="comments__picture">
+                        <img src="./images/person.jpg" alt="persona" class="comments__image">
+                    </figure>
+
+                </section>
+                <section class="comments__body" data-id="2">
+                    <div class="comments__text">
+                        <h2 class="subtitle">Soy Alejandra <span class="comments__profession">
+                            empresaria
+                        </span></h2>
+                        <p class="comments__personal">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati aperiam reiciendis quasi quibusdam sapiente.
+                        </p>
+                    </div>
+
+                    <figure class="comments__picture">
+                        <img src="./images/person2.jpg" alt="persona" class="comments__image">
+                    </figure>
+
+                </section>
+                <section class="comments__body" data-id="3">
+                    <div class="comments__text">
+                        <h2 class="subtitle">Soy Sarai <span class="comments__profession">
+                            estudiante
+                        </span></h2>
+                        <p class="comments__personal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit beatae dolorum fugiat odio praesentium corrupti ex consequuntur nam, id nemo porro pariatur in deleniti voluptatum vero tempore ullam sapiente voluptates?
+                        </p>
+                    </div>
+
+                    <figure class="comments__picture">
+                        <img src="./images/person.jpg" alt="persona" class="comments__image">
+                    </figure>
+
+                </section>
+                <img src="./images/icons/rowR.svg" alt="derecha" id="next" class="comments__arrow">
+            </div>
+        </section>
+
+        <section class="catalog container" id="catalogo">
+            <h2 class="subtitle">Visualiza todas las opciones</h2>
+            <div class="catalog__filters">
+                <div class="filter__group">
+                    <label for="precio">Precio:</label>
+                    <select id="precio">
+                        <option value="todos">Todos</option>
+                        <option value="bajo">Bajo</option>
+                        <option value="medio">Medio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+                </div>
+
+                <div class="filter__group">
+                    <label for="ubicacion">Ubicación:</label>
+                    <select id="ubicacion">
+                        <option value="todos">Todos</option>
+                        <option value="ciudad">Ciudad</option>
+                        <option value="playa">Playa</option>
+                        <option value="montaña">Montaña</option>
+                    </select>
+                </div>
+
+                <div class="filter__group">
+                    <label for="venta_renta">Venta/Renta:</label>
+                    <select id="venta_renta">
+                        <option value="todos">Todos</option>
+                        <option value="venta">Venta</option>
+                        <option value="renta">Renta</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="catalog__options">
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 1" class="card__image">
+                    <h3 class="card__title">Casa 1</h3>
+                    <p class="card__price">$300,000</p>
+                    <p class="card__location">Playa</p>
+                    <p class="card__venta_renta">En Venta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 2" class="card__image">
+                    <h3 class="card__title">Casa 2</h3>
+                    <p class="card__price">$350,000</p>
+                    <p class="card__location">Ciudad</p>
+                    <p class="card__venta_renta">En Renta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 3" class="card__image">
+                    <h3 class="card__title">Casa 3</h3>
+                    <p class="card__price">$700,000</p>
+                    <p class="card__location">Ciudad</p>
+                    <p class="card__venta_renta">En Venta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 4" class="card__image">
+                    <h3 class="card__title">Casa 4</h3>
+                    <p class="card__price">$90,000</p>
+                    <p class="card__location">Montaña</p>
+                    <p class="card__venta_renta">En Venta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 5" class="card__image">
+                    <h3 class="card__title">Casa 5</h3>
+                    <p class="card__price">$300,000</p>
+                    <p class="card__location">Playa</p>
+                    <p class="card__venta_renta">En Venta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 6" class="card__image">
+                    <h3 class="card__title">Casa 6</h3>
+                    <p class="card__price">$350,000</p>
+                    <p class="card__location">Ciudad</p>
+                    <p class="card__venta_renta">En Renta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 7" class="card__image">
+                    <h3 class="card__title">Casa 7</h3>
+                    <p class="card__price">$700,000</p>
+                    <p class="card__location">Ciudad</p>
+                    <p class="card__venta_renta">En Venta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 8" class="card__image">
+                    <h3 class="card__title">Casa 8</h3>
+                    <p class="card__price">$90,000</p>
+                    <p class="card__location">Montaña</p>
+                    <p class="card__venta_renta">En Venta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 9" class="card__image">
+                    <h3 class="card__title">Casa 9</h3>
+                    <p class="card__price">$300,000</p>
+                    <p class="card__location">Playa</p>
+                    <p class="card__venta_renta">En Venta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 10" class="card__image">
+                    <h3 class="card__title">Casa 10</h3>
+                    <p class="card__price">$350,000</p>
+                    <p class="card__location">Ciudad</p>
+                    <p class="card__venta_renta">En Renta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 11" class="card__image">
+                    <h3 class="card__title">Casa 11</h3>
+                    <p class="card__price">$700,000</p>
+                    <p class="card__location">Ciudad</p>
+                    <p class="card__venta_renta">En Venta</p>
+                </article>
+                <article class="catalog__card">
+                    <img src="./images/home.jpg" alt="Casa 12" class="card__image">
+                    <h3 class="card__title">Casa 12</h3>
+                    <p class="card__price">$90,000</p>
+                    <p class="card__location">Montaña</p>
+                    <p class="card__venta_renta">En Venta</p>
+                </article>
+            </div>
+
+            <div id="noResults" class="catalog__error">
+                <p>No hay casas que cumplan con tus criterios de búsqueda.</p>
+                <img src="./images/icons/error.svg" alt="No hay resultados" width="200">
+            </div>
+        </section>
+
+        <section class="questions container" id="preguntas">
+            <h2 class="subtitle">Preguntas frecuentes</h2>
+            <p class="question__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, reprehenderit.</p>
+
+            <section class="questions__container">
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Pregunta1
+                            <span class="questions__arrow">
+                                <img src="./images/icons/arrowD.svg" alt="flecha abajo" class="questions__image">
+                            </span>
+                        </h3>
+                        <p class="questions__show">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus rem harum similique, ipsa neque perferendis molestias assumenda quasi accusamus, quod ipsum, vitae ab veniam aliquid in magni dolorem error sequi!</p>
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Pregunta2
+                            <span class="questions__arrow">
+                                <img src="./images/icons/arrowD.svg" alt="flecha abajo" class="questions__image">
+                            </span>
+                        </h3>
+                        <p class="questions__show">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus rem harum similique, ipsa neque perferendis molestias assumenda quasi accusamus, quod ipsum, vitae ab veniam aliquid in magni dolorem error sequi!</p>
+                    </div>
+                </article>
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Pregunta3
+                            <span class="questions__arrow">
+                                <img src="./images/icons/arrowD.svg" alt="flecha abajo" class="questions__image">
+                            </span>
+                        </h3>
+                        <p class="questions__show">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus rem harum similique, ipsa neque perferendis molestias assumenda quasi accusamus, quod ipsum, vitae ab veniam aliquid in magni dolorem error sequi!</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+    </main>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/questions.js"></script>
+</body>
+</html>
