@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --color-title: #001A49;
+    --color-title: #2B2A4C;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
 
 .navbar__title {
     font-weight: 300;
-    color: #ff5f5f;
+    color: #B31312;
 }
 
 .navbar__link__principal {
@@ -64,7 +64,7 @@ body {
 }
 
 .navbar__link:hover {
-    color: #ff5f5f;
+    color: #B31312;
 }
 
 
@@ -105,7 +105,7 @@ body {
 
 .top__link {
     display: inline-block;
-    background-color: #0166c4;
+    background-color: #B31312;
     justify-self: center;
     color: #fff;
     text-decoration: none;
@@ -115,7 +115,7 @@ body {
 }
 
 .top__link:hover {
-    background-color: #014f9c;
+    background-color: #EA906C;
 }
 
 
@@ -160,6 +160,10 @@ body {
 
 /*  catalogo  */
 
+.catalog {
+    text-align: center;
+}
+
 .catalog__filters {
     display: flex;
     justify-content: space-between;
@@ -184,7 +188,7 @@ body {
     text-align: center;
     font-weight: bold;
     padding: 100px 0;
-    color: #6f0c1b;
+    color: #B31312;
 }
 
 .card__image {
@@ -202,7 +206,7 @@ body {
 
 .card__price {
     font-weight: bold;
-    color: #ff5f5f;
+    color: #B31312;
     margin-bottom: 5px;
 }
 
@@ -229,7 +233,7 @@ body {
 }
 
 .comments{
-    background-color: #e5e5f7;
+    background-color: #EEE2DE;
 }
 
 .comments__container{
@@ -261,7 +265,7 @@ body {
 .comments__image{
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 10%;
     object-fit: cover;
     object-position: 50% 30%;
 }
@@ -271,7 +275,7 @@ body {
 }
 
 .comments__profession{
-    background-color: royalblue;
+    background-color: #B31312;
     color: #fff;
     display: inline-block;
     padding: 5px;
@@ -297,7 +301,7 @@ body {
 .questions__padding{
     padding: 0;
     transition: padding .3s;
-    border: 1px solid #5454D4;
+    border: 1px solid #5151c7;
     border-radius: 6px;
 }
 
