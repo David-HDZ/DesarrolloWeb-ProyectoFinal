@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/publicar_casa.css">
+</head>
+<body>
+    <header class="top">
+        <nav class="navbar container">
+            <div class="navbar__logo">
+                <div>
+                    <h2 class="navbar__title">HAMOC</h2>
+                    <hr>
+                    <p>Calderón Guevara César Yair</p>
+                    <p>Hernández Rivera David</p>
+                    <p>Maceda Patricio Fernando</p>
+                </div>
+            </div>
+
+            <ul class="navbar__link__principal navbar__link--menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__link">Inicio</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="contacto.html" class="navbar__link">Contacto</a>
+                </li>
+                <img src="./images/icons/close.svg" alt="cerrar ventana" class="navbar__close">
+            </ul>
+
+            <div class="navbar__menu">
+                <img src="./images/icons/menu.svg" alt="menu" class="navbar__image">
+            </div>
+        </nav>
+
+        <section class="top__introduction container">
+            <h1 class="top__title">¿Buscas vender o rentar?</h1>
+            <p class="top__paragraph">Utiliza el siguiente formulario para publicar tu propiedad. ¡HAMOC te pondra en contacto con las personas interesadas!</p>
+            <a href="#formulario" class="top__link">¡Publicar mi Propiedad!</a>
+        </section>
+    </header>
+
+    <main>
+        <div class="form__container container">
+            <div>
+              <h2 class="subtitle">Anuncia tu propiedad aqui</h2>
+              <p class="form-description">Llena los siguientes datos para que tu propiedad pueda anunciarse en nuestro sitio. ¡Es completamente gratis!</p>
+              <form action="php-scripts/publicar_casa.php" method="POST" class="form" id="formulario" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label class="form-label" for="nombre">Nombre de la propiedad:</label>
+                  <input class="form-input" type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="precio">Precio en Pesos Mexicanos [MXN]:</label>
+                  <input class="form-input" type="text" id="precio" name="precio" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="locacion">Ubicación:</label>
+                    <select class="form-input" id="locacion" name="locacion">
+                      <option value="Ciudad">Ciudad</option>
+                      <option value="Playa">Playa</option>
+                      <option value="Montaña">Montaña</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="estado">Indica si es Renta o Venta:</label>
+                    <select class="form-input" id="estado" name="estado">
+                      <option value="Venta">Venta</option>
+                      <option value="Renta">Renta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="contacto">Tu nombre de contacto:</label>
+                    <input class="form-input" type="text" id="contacto" name="contacto" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="direccion">Dirección de la propiedad:</label>
+                    <textarea class="form-textarea" id="direccion" name="direccion" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="imagen">Imagen de la propiedad (De extensión .jpg o .png):</label>
+                    <input class="form-input" type="file" id="imagen" name="imagen">
+                </div>
+                <button class="form-submit" type="submit" onclick="resetForm()">Enviar</button>
+                <div class="back-button">
+                  <a href="index.html">Volver al inicio</a>
+                </div>
+              </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/questions.js"></script>
+    <script>
+        const precioInput = document.getElementById('precio');
+      
+        precioInput.addEventListener('input', function() {
+          // Eliminar las comas existentes en el valor actual del input
+          const valor = this.value.replace(/,/g, '');
+      
+          // Convertir el valor en un número entero
+          const numero = parseInt(valor, 10);
+      
+          // Verificar si el valor es un número válido
+          if (!isNaN(numero)) {
+            // Dar formato con separación por comas al nuevo valor
+            const valorFormateado = numero.toLocaleString('es-MX');
+      
+            // Actualizar el valor del input con el formato aplicado
+            this.value = valorFormateado;
+          }
+        });
+    </script>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+</body>
+</html>

@@ -48,7 +48,7 @@
         <div>
           <h2 class="subtitle">Consultas y sugerencias</h2>
           <p class="form-description">En HAMOC, valoramos la opinión y retroalimentación de nuestros usuarios. Estamos aquí para ayudarte y resolver cualquier duda que puedas tener. Por favor, completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.</p>
-          <form class="form">
+          <form action="php-scripts/contacto.php" method="POST" class="form" id="formulario">
             <div class="form-group">
               <label class="form-label" for="nombre">Nombre:</label>
               <input class="form-input" type="text" id="nombre" name="nombre" required>
@@ -61,7 +61,7 @@
               <label class="form-label" for="mensaje">Mensaje:</label>
               <textarea class="form-textarea" id="mensaje" name="mensaje" required></textarea>
             </div>
-            <button class="form-submit" type="submit">Enviar</button>
+            <button class="form-submit" type="submit" onclick="resetForm()">Enviar</button>
             <div class="back-button">
               <a href="index.html">Volver al inicio</a>
             </div>
@@ -77,6 +77,7 @@
   </main>
 
     <script src="./js/menu.js"></script>
+    <script src="./js/clear_form.js"></script>
 </body>
 </html>
 
