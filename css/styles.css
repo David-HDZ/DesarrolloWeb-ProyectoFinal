@@ -351,6 +351,40 @@ body {
     display: block;
 }
 
+
+.links {
+    padding-top: 0;
+    text-align: center;
+}
+
+    /* styles.css */
+
+    /* Estilos generales */
+
+    .link-item {
+    margin-bottom: 10px;
+    }
+    
+    .link-item h3 {
+    margin: 0;
+    padding: 0;
+    }
+    
+    .link-icon img {
+    width: 16px;
+    height: 16px;
+    }
+    
+    .video-container {
+    margin-top: 20px;
+    }
+    
+    /* Estilos para hover en los links */
+    
+    .link-item:hover h3 {
+    color: #B31312;
+    }
+    
   /* Media queries */
 
 @media (max-width:800px){
