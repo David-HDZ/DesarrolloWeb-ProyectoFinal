@@ -32,18 +32,39 @@ $carpetaImagenes = '../casas_img/';
 // Ruta completa del archivo de imagen
 $rutaImagen = $carpetaImagenes . $imagenNombre;
 
-// Mover la imagen subida a la carpeta destino
-if (move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaImagen)) {
-    echo "La imagen se ha guardado correctamente en la carpeta.";
+// Verificar si se ha subido una imagen
+if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
+    // Obtener el nombre de la imagen subida
+    $imagenNombre = $_FILES['imagen']['name'];
+
+    // Ruta de la carpeta donde se guardarán las imágenes
+    $carpetaImagenes = '../casas_img/';
+
+    // Ruta completa del archivo de imagen
+    $rutaImagen = $carpetaImagenes . $imagenNombre;
+
+    // Mover la imagen subida a la carpeta destino
+    if (move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaImagen)) {
+        echo "La imagen se ha guardado correctamente en la carpeta.";
+
+        // Establecer permisos de lectura para todos los usuarios (0644)
+        chmod($rutaImagen, 0644);
+    } else {
+        echo "Error al guardar la imagen en la carpeta.";
+    }
 } else {
-    echo "Error al guardar la imagen en la carpeta.";
+    // En caso de que no se haya subido una imagen, puedes asignar un valor predeterminado o mostrar un mensaje de error.
+    $imagenNombre = ""; // Valor predeterminado o establecer como NULL según tus necesidades.
+    // Opcional: mostrar un mensaje de error
+    echo "No se ha seleccionado una imagen.";
 }
+
 
 // Crear una sentencia preparada
 $stmt = $conn->prepare("INSERT INTO `Casas-Oferta` (Nombre, Precio, Locacion, Estado, Contacto, Direccion, Imagen) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
 // Vincular los parámetros
-$stmt->bind_param("sdssssb", $nombre, $precio, $locacion, $estado, $contacto, $direccion, $imagenNombre);
+$stmt->bind_param("sdsssss", $nombre, $precio, $locacion, $estado, $contacto, $direccion, $imagenNombre);
 
 // Ejecutar la sentencia preparada
 if ($stmt->execute()) {
